@@ -4,7 +4,7 @@ $(document).ready(function() {
         var password = $("#new_password").val().trim();
         if (username != "" && password != "" ){
             $.ajax({
-                url: './register.php',
+                url: './register/register.php',
                 type: 'post',
                 data: {
                     username: username,
