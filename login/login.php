@@ -1,5 +1,5 @@
 <?php
-    require 'config.php';
+    require '../config.php';
     $username = $_POST["username"];
     $password = $_POST["password"];
     $tsql = "SELECT COUNT(*) AS countquery

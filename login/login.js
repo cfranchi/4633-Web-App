@@ -4,7 +4,7 @@ $(document).ready(function() {
         var password = $("#password").val().trim();
         if (username != "" && password != "" ){
             $.ajax({
-                url: './login.php',
+                url: '.login/login.php',
                 type: 'post',
                 data: {
                     username: username,
