@@ -2,9 +2,6 @@
 <script src="./searchmatches/searchbyteam.js"></script>
 <div>
     <div id="saved_matches_div">
-        <?php
-            require './savedmatches/getsavedmatches.php'
-        ?>
     </div>
     <div id="search_matches_div">
         <input type="text" class="textbox" id="team1" name="team1" placeholder="Search by team name"/>
