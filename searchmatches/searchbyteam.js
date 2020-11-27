@@ -8,16 +8,16 @@ $(document).ready(function() {
                     team1: team1
                 },
                 success: function(response) {
-                    response = [{"team1" : "test1", "team2" : "test2", "location" : "test3", "date" : "test4"}];
+                    var data = $.parseJSON(response);
                     var tbl=$("<table/>").attr("id","search_results_table");
                     $("#search_results_div").append(tbl);
-                    for(var i = 0; i < response.length; i++)
+                    for(var i = 0; i < data.length; i++)
                         {
                             var tr="<tr>";
-                            var td1="<td>" + response[i]["team1"] + "</td>";
-                            var td2="<td>" + response[i]["team2"] + "</td>";
-                            var td3="<td>" + response[i]["location"] + "</td>";
-                            var td4="<td>" + response[i]["date"] + "</td></tr>";
+                            var td1="<td>" + data[i]["team1"] + "</td>";
+                            var td2="<td>" + data[i]["team2"] + "</td>";
+                            var td3="<td>" + data[i]["location"] + "</td>";
+                            var td4="<td>" + data[i]["date"] + "</td></tr>";
                             $("#search_results_table").append(tr + td1 + td2 + td3 + td4); 
                         }
                 }
