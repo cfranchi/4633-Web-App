@@ -1,5 +1,5 @@
 $(function() {
-    $("#authentication_div").load("./authentication/register/registerView.html"); 
+    $("#authentication_div").html("./authentication/register/registerView.html"); 
 });
 
 $(document).ready(function() {
