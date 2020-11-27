@@ -3,7 +3,8 @@ function saveResults(response, save_button_arr) {
     for (var i = 0; i < save_button_arr.length; i++) {
         console.log(i);
         $("#add_button_" + i).click(function() {
-            console.log(data[i - 1])
+            i = i - 1;
         });
+        console.log(i);
     }
 }
