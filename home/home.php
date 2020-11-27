@@ -1,5 +1,10 @@
 <!--<script src="./home/home.js"></script>-->
 <script src="./searchmatches/searchbyteam.js"></script>
+<style>
+table, th, td {
+  border: 1px solid black;
+}
+</style>
 <div>
     <div id="saved_matches_div">
     </div>
