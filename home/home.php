@@ -6,8 +6,7 @@ table, th, td {
 }
 </style>
 <div>
-    <div id="saved_matches_div">
-    </div>
+    <div id="saved_matches_div"></div>
     <div id="search_matches_div">
         <input type="text" class="textbox" id="team1" name="team1" placeholder="Search by team name"/>
         <button id="search_team_button">search</button>
@@ -21,13 +20,6 @@ table, th, td {
     </div>
     <h4>RESULTS</h4>
     <div id="search_results_div">
-        <table id="table">
-            <tr>
-                <th>Team</th>
-                <th>Opponent</th>
-                <th>Location</th>
-                <th>Date</th>
-            </tr>
-        </table>
+        <table id="table"></table>
     </div>
 </div>

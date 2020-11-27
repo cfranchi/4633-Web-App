@@ -12,6 +12,13 @@ $(document).ready(function() {
                     var data = $.parseJSON(response);
                     var tbl = $("<table/>").attr("id","search_results_table");
                     $("#search_results_div").append(tbl);
+                    var tr = "<tr>";
+                    var th0 = "<th></th>";
+                    var th1 = "<th>Team</th>";
+                    var th2 = "<th>Opponent</th>";
+                    var th3 = "<th>Location</th>";
+                    var th4 = "<th>Date</th>";
+                    $("#search_results_table").append(tr + th0 + th1 + th2 + th3 + th4 + th5); 
                     for(var i = 0; i < data.length; i++)
                         {
                             var tr = "<tr>";
