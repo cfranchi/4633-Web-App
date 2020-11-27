@@ -21,6 +21,13 @@ table, th, td {
     </div>
     <h4>RESULTS</h4>
     <div id="search_results_div">
-        <table id="table"></table>
+        <table id="table">
+            <tr>
+                <th>Team</th>
+                <th>Opponent</th>
+                <th>Location</th>
+                <th>Date</th>
+            </tr>
+        </table>
     </div>
 </div>
