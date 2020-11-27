@@ -7,9 +7,8 @@ function saveResults(response, save_button_arr) {
             var team2 = data[i]["team2"];
             var location = data[i]["location"];
             var date = data[i]["date"];
-            console.log(username, team1, team2, location, date);
-            /*$.ajax({
-                url: 'savematch.php',
+            $.ajax({
+                url: './savematch.php',
                 type: 'post',
                 data: {
                     username: username,
@@ -20,13 +19,12 @@ function saveResults(response, save_button_arr) {
                 },
                 success: function(response) {
                     if (response == 0) {
-                        $("#registration_success_message").attr("hidden", false)
+                        alert("match saved");
                     } else {
-                        alert("username already exists or timeout occured!");
+                        alert("error occured!");
                     }
                 }
-            });*/
+            });
         });
-        console.log(i);
     }
 }
