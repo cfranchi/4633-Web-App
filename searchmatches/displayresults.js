@@ -22,4 +22,10 @@ function displayResults(response) {
             save_button_arr.push(save_button);
             $("#search_results_table").append(tr + save_button + td1 + td2 + td3 + td4); 
         }
+
+        for (var i = 0; i < save_button_arr.length; i++) {
+            $("#add_button_" + i).click(function() {
+                console.log(i);
+            });
+        }
 }
