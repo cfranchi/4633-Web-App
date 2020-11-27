@@ -1,6 +1,8 @@
+var username;
+
 $(document).ready(function() {
     $("#login_button").click(function() {
-        var username = $("#username").val().trim();
+        username = $("#username").val().trim();
         var password = $("#password").val().trim();
         if (username != "" && password != "" ){
             $.ajax({
