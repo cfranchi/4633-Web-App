@@ -8,7 +8,7 @@ function saveResults(response, save_button_arr) {
             var location = data[i]["location"];
             var date = data[i]["date"];
             $.ajax({
-                url: './savematch.php',
+                url: './searchmatches/savematch.php',
                 type: 'post',
                 data: {
                     username: username,
