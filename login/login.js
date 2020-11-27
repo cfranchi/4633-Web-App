@@ -1,7 +1,7 @@
 var username;
 
 $(function() {
-    $("#main_div").load("loginView.html"); 
+    $("#main_div").load("./login/loginView.html"); 
 });
 
 $(document).ready(function() {
