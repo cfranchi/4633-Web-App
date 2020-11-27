@@ -22,7 +22,7 @@ $(document).ready(function() {
                     for(var i = 0; i < data.length; i++)
                         {
                             var tr = "<tr>";
-                            var check = "<td><button id='add_button_" + i + "'>search</button></td>";
+                            var check = "<td><button id='add_button_" + i + "'>save</button></td>";
                             var td1 = "<td>" + data[i]["team1"] + "</td>";
                             var td2 = "<td>" + data[i]["team2"] + "</td>";
                             var td3 = "<td>" + data[i]["location"] + "</td>";
