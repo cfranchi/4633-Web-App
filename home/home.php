@@ -16,6 +16,6 @@
     </div>
     <h4>RESULTS</h4>
     <div id="search_results_div">
-        <table id="table" align="center" border="1px"></table>
+        <table id="table"></table>
     </div>
 </div>

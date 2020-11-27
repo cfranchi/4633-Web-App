@@ -8,32 +8,17 @@ $(document).ready(function() {
                     team1: team1
                 },
                 success: function(response) {
-                    var list = response;
-                    var cols = [];               
-                    for (var i = 0; i < list.length; i++) { 
-                        for (var k in list[i]) { 
-                            if (cols.indexOf(k) === -1) {  
-                                cols.push(k); 
-                            } 
-                        } 
-                    }
-                    var table = document.createElement("table"); 
-                    var tr = table.insertRow(-1); 
-                    for (var i = 0; i < cols.length; i++) { 
-                        var theader = document.createElement("th"); 
-                        theader.innerHTML = cols[i]; 
-                        tr.appendChild(theader); 
-                    } 
-                    for (var i = 0; i < list.length; i++) { 
-                        trow = table.insertRow(-1); 
-                        for (var j = 0; j < cols.length; j++) { 
-                            var cell = trow.insertCell(-1); 
-                            cell.innerHTML = list[i][cols[j]]; 
-                        } 
-                    } 
-                    var el = document.getElementById("table"); 
-                    el.innerHTML = ""; 
-                    el.appendChild(table);
+                    var tbl=$("<table/>").attr("id","search_results_table");
+                    $("#search_results_div").append(tbl);
+                    for(var i = 0; i < response.length; i++)
+                        {
+                            var tr="<tr>";
+                            var td1="<td>" + response[i]["team1"] + "</td>";
+                            var td2="<td>" + response[i]["team2"] + "</td>";
+                            var td3="<td>" + response[i]["location"] + "</td>";
+                            var td4="<td>" + response[i]["date"] + "</td></tr>";
+                            $("#search_results_table").append(tr + td1 + td2 + td3 + td4); 
+                        }
                 }
             });
     });
