@@ -17,8 +17,8 @@ $(document).ready(function() {
                     var th1 = "<th>Team</th>";
                     var th2 = "<th>Opponent</th>";
                     var th3 = "<th>Location</th>";
-                    var th4 = "<th>Date</th>";
-                    $("#search_results_table").append(tr + th0 + th1 + th2 + th3 + th4 + th5); 
+                    var th4 = "<th>Date</th></tr>";
+                    $("#search_results_table").append(tr + th0 + th1 + th2 + th3 + th4); 
                     for(var i = 0; i < data.length; i++)
                         {
                             var tr = "<tr>";
