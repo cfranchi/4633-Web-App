@@ -22,4 +22,7 @@ table, th, td {
     <div id="search_results_div">
         <table id="table"></table>
     </div>
+    <div id="save_results_div">
+        <button id="save_results_button">save matches</button>
+    </div>
 </div>
