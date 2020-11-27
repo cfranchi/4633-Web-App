@@ -1,5 +1,9 @@
 var username;
 
+$(function() {
+    $("#main_div").load("loginView.html"); 
+});
+
 $(document).ready(function() {
     $("#login_button").click(function() {
         username = $("#username").val().trim();
