@@ -8,6 +8,7 @@ $(document).ready(function() {
                     team1: team1
                 },
                 success: function(response) {
+                    response = [{"test" : "test1"}];
                     var tbl=$("<table/>").attr("id","search_results_table");
                     $("#search_results_div").append(tbl);
                     for(var i = 0; i < response.length; i++)
