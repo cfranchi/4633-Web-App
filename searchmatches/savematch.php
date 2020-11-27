@@ -1,5 +1,6 @@
 <?php
     require '../config.php';
+    $username = $_POST["username"];
     $team1 = $_POST["team1"];
     $team2 = $_POST["team2"];
     $location = $_POST["location"];
