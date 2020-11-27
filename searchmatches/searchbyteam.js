@@ -8,6 +8,7 @@ $(document).ready(function() {
                     team1: team1
                 },
                 success: function(response) {
+                    $("#search_results_div").html("");
                     var data = $.parseJSON(response);
                     var tbl=$("<table/>").attr("id","search_results_table");
                     $("#search_results_div").append(tbl);
