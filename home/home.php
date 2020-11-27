@@ -1,5 +1,6 @@
 <!--<script src="./home/home.js"></script>-->
 <script src="./searchmatches/displayresults.js"></script>
+<script src="./searchmatches/saveresults.js"></script>
 <script src="./searchmatches/searchbyteam.js"></script>
 <style>
 table, th, td {

@@ -8,7 +8,7 @@ $(document).ready(function() {
                     team1: team1
                 },
                 success: function(response) {
-                    displayResults(response);
+                    saveResults(displayResults(response));
                 }
             });
     });
