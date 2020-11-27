@@ -1,4 +1,5 @@
 <!--<script src="./home/home.js"></script>-->
+<script src="./searchmatches/displayresults.js"></script>
 <script src="./searchmatches/searchbyteam.js"></script>
 <style>
 table, th, td {
@@ -21,8 +22,5 @@ table, th, td {
     <h4>RESULTS</h4>
     <div id="search_results_div">
         <table id="table"></table>
-    </div>
-    <div id="save_results_div">
-        <button id="save_results_button">save matches</button>
     </div>
 </div>
