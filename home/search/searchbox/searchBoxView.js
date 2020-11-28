@@ -5,17 +5,17 @@ $(function() {
 $(document).ready(function() {
     $("#search_box_div").on('click', '#search_team_button', function () {
         var team1 = $("#team1").val().trim();
-            $.ajax({
-                url: 'https://4633testapi.azurewebsites.net/getScheduleByTeam.php',
-                type: 'post',
-                data: {
-                    team1: team1
-                },
-                success: function(response) {
-                    var data = $.parseJSON(response);
-                    var save_button_arr = [];
-                    tableName = "search_results_table";
-                    saveResults(response, displayResults(response, tableName, 
+        $.ajax({
+            url: 'https://4633testapi.azurewebsites.net/getScheduleByTeam.php',
+            type: 'post',
+            data: {
+                team1: team1
+            },
+            success: function(response) {
+                var data = $.parseJSON(response);
+                var save_button_arr = [];
+                tableName = "search_results_table";
+                saveResults(response, displayResults(tableName, 
                     (tableName) => {
                         for (var i = 0; i < data.length; i++) {
                             var tr = "<tr>";
@@ -27,11 +27,10 @@ $(document).ready(function() {
                             save_button_arr.push(save_button);
                             $("#" + tableName).append(tr + save_button + td1 + td2 + td3 + td4); 
                         }
-                        console.log(save_button_arr);
                         return save_button_arr;
                     })
-                    );
-                }
-            }); 
+                );
+            }
+        }); 
     });
 });
