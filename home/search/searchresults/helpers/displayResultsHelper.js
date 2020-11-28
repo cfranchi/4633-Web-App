@@ -1,9 +1,9 @@
 function displayResults(response) {
-    $("#search_results_div").html("");
+    $("#search_results_table_div").html("");
     var data = $.parseJSON(response);
     var tbl = $("<table/>").attr("id","search_results_table");
     var save_button_arr = [];
-    $("#search_results_div").append(tbl);
+    $("#search_results_table_div").append(tbl);
     var tr = "<tr>";
     var th0 = "<th></th>";
     var th1 = "<th>Team</th>";
