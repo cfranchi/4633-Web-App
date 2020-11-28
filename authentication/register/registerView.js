@@ -3,7 +3,7 @@ $(function() {
 });
 
 $(document).ready(function() {
-    $("#register_button").click(function() {
+    $("#register_div").on('click', '#register_button', function () {
         var username = $("#new_username").val().trim();
         var password = $("#new_password").val().trim();
         if (username != "" && password != "" ){
