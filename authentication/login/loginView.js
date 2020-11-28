@@ -6,6 +6,7 @@ $(function() {
 
 $(document).ready(function() {
     $("#login_button").click(function() {
+        console.log('pass');
         username = $("#username").val().trim();
         var password = $("#password").val().trim();
         if (username != "" && password != "" ){
