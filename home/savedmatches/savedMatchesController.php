@@ -9,7 +9,6 @@
     if( $conn === false ) {
         die( print_r( sqlsrv_errors(), true));
     };
-    require '../config.php';
     $username = $_POST["username"];
     $tsql = "SELECT * FROM [dbo].[Matches]
         WHERE Username = '$username'";
