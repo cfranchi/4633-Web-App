@@ -12,8 +12,11 @@ $(document).ready(function() {
                     team1: team1
                 },
                 success: function(response) {
-                    saveResults(response, displayResults(response));
+                    saveResults(response, displayResults(response, "search_results_table", () => {
+                        return save_button_arr;
+                    })
+                    );
                 }
-            });
+            }); 
     });
 });

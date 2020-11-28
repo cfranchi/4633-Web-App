@@ -10,7 +10,7 @@ $(document).ready(function() {
             username: username
         },
         success: function(response) {
-
+            
         }
     });
 });
