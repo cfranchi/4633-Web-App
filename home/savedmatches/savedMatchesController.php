@@ -1,4 +1,5 @@
 <?php
+//require statement not working for class imports... see searchResultsController.php for details on error.
 class Match {
     public $team1;
     public $team2;
