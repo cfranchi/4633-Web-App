@@ -14,8 +14,9 @@ $(document).ready(function() {
                 success: function(response) {
                     var data = $.parseJSON(response);
                     var save_button_arr = [];
-                    saveResults(response, displayResults(response, "search_results_table", 
-                    () => {
+                    tableName = "search_results_table";
+                    saveResults(response, displayResults(response, tableName, 
+                    (tableName) => {
                         for (var i = 0; i < data.length; i++) {
                             var tr = "<tr>";
                             var save_button = "<td><button id='add_button_" + i + "'>save</button></td>";
