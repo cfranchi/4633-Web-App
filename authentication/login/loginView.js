@@ -20,7 +20,7 @@ $(document).ready(function() {
                 success: function(response) {
                     if (response == 0) {
                         $("#login_div").remove();
-                        $("#main_div").load("https://4633-project-webapp.azurewebsites.net/home/home.php");
+                        $("#main_div").load("./home/homeView.html");
                     } else if (response == 1) {
                         alert("incorrect username or password");
                     } else {
