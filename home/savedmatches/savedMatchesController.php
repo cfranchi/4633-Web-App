@@ -1,4 +1,6 @@
 <?php
+    require './shared/helpers/Match.php';
+    require './shared/helpers/Schedule.php';
     $serverName = "4633-project-server.database.windows.net";
     $connectionOptions = array(
         "Database" => "4633-Web-App",
@@ -16,12 +18,14 @@
     if ($getResults === false) {
         echo (sqlsrv_errors());
     }
+    $schedule = new Schedule();
     while ($row = sqlsrv_fetch_array($getResults, SQLSRV_FETCH_BOTH)) {
         $team1 = $row['Team1'];
         $team2 = $row['Team2'];
         $location = $row['Location'];
         $date = $row['MatchDate'];
-        echo json_encode($team1, $team2, $location, $date);
+        $match = new Match($team1, $team2, $location, $date);
+        $schedule.addMatch($match);
     }
     sqlsrv_free_stmt($getResults);
 ?>
