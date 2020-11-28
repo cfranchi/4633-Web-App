@@ -1,7 +1,7 @@
 var username;
 
 $(function() {
-    $("#authentication_div").html("./authentication/login/loginView.html"); 
+    $("#login_div").load("./authentication/login/loginView.html"); 
 });
 
 $(document).ready(function() {
