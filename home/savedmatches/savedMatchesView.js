@@ -1,7 +1,8 @@
-
+$(function() {
+    $("#saved_matches_div").load("./home/savedmatches/savedMatchesView.html"); 
+});
 
 $(document).ready(function() {
-    $("#saved_matches_div").load("./home/savedmatches/savedMatchesView.html"); 
     $.ajax({
         url: './home/savedmatches/savedMatchesController.php',
         type: 'post',
