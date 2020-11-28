@@ -1,5 +1,5 @@
 <?php
-    require '../config.php';
+    require 'https://4633-project-webapp.azurewebsites.net/config.php';
     $username = $_POST["username"];
     $password = $_POST["password"];
     $tsql = "INSERT INTO [dbo].[Users] VALUES ('$username', '$password')";
