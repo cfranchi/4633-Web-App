@@ -1,10 +1,10 @@
 var username;
 
-$(function() {
-    $("#login_div").load("./authentication/login/loginView.html"); 
-});
 
 $(document).ready(function() {
+    $(function() {
+        $("#login_div").load("./authentication/login/loginView.html"); 
+    });    
     $("#login_button").click(function() {
         console.log('pass');
         username = $("#username").val().trim();
