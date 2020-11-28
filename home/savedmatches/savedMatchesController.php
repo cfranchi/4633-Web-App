@@ -62,5 +62,6 @@ $serverName = "4633-project-server.database.windows.net";
     if ($getResults === false) {
         echo (sqlsrv_errors());
     }
+    $schedule = new Schedule();
     sqlsrv_free_stmt($getResults);
 ?>
