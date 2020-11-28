@@ -27,6 +27,7 @@ $(document).ready(function() {
                             save_button_arr.push(save_button);
                             $("#" + tableName).append(tr + save_button + td1 + td2 + td3 + td4); 
                         }
+                        console.log(save_button_arr);
                         return save_button_arr;
                     })
                     );
