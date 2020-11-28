@@ -9,5 +9,5 @@ function displayResults(response, tableName, callback = () => {}) {
     var th3 = "<th>Location</th>";
     var th4 = "<th>Date</th></tr>";
     $("#" + tableName).append(tr + th0 + th1 + th2 + th3 + th4); 
-    return callback();
+    return callback(tableName);
 }
