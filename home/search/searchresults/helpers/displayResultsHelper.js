@@ -22,4 +22,5 @@ function displayResults(response, tableName, callback = () => {}) {
         $("#" + tableName).append(tr + save_button + td1 + td2 + td3 + td4); 
     }
     callback();
+    return save_button_arr;
 }

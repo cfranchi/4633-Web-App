@@ -13,7 +13,6 @@ $(document).ready(function() {
                 },
                 success: function(response) {
                     saveResults(response, displayResults(response, "search_results_table", () => {
-                        return save_button_arr;
                     })
                     );
                 }
