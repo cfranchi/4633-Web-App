@@ -71,5 +71,6 @@ class Schedule {
         $match = new Match($team1, $team2, $location, $date);
         $schedule->addMatch($match);
     }
+    echo json_encode($schedule->returnMatches());
     sqlsrv_free_stmt($getResults);
 ?>
