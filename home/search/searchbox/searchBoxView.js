@@ -1,3 +1,7 @@
+$(function() {
+    $("#search_box_div").load("./home/search/searchbox/searchBoxView.html"); 
+});
+
 $(document).ready(function() {
     $("#search_box_div").on('click', '#search_team_button', function () {
         var team1 = $("#team1").val().trim();
