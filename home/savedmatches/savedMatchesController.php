@@ -45,7 +45,7 @@ class Schedule {
     }
 }
 
-$serverName = "4633-project-server.database.windows.net";
+    $serverName = "4633-project-server.database.windows.net";
     $connectionOptions = array(
         "Database" => "4633-Web-App",
         "Uid" => "clouddev",
@@ -63,8 +63,13 @@ $serverName = "4633-project-server.database.windows.net";
         echo (sqlsrv_errors());
     }
     $schedule = new Schedule();
-    $match = new Match("test", "test1", "tes3", "test4");
-    $schedule->addMatch($match);
-    echo json_encode($schedule->returnMatches());
+    while ($row = sqlsrv_fetch_array($getResults, SQLSRV_FETCH_BOTH)) {
+        $team1 = $row['Team1'];
+        $team2 = $row['Team2'];
+        $location = $row['Location'];
+        $date = $row['MatchDate'];
+        $match = new Match($team1, $team2, $location, $date);
+        $schedule->addMatch($match);
+    }
     sqlsrv_free_stmt($getResults);
 ?>
