@@ -65,5 +65,6 @@ $serverName = "4633-project-server.database.windows.net";
     $schedule = new Schedule();
     $match = new Match("test", "test1", "tes3", "test4");
     $schedule->addMatch($match);
+    echo json_encode($schedule->returnMatches());
     sqlsrv_free_stmt($getResults);
 ?>
