@@ -21,8 +21,7 @@
         $team2 = $row['Team2'];
         $location = $row['Location'];
         $date = $row['MatchDate'];
-        echo "$team1, $team2, $location, $date";
-        echo "";
+        echo json_encode($team1, $team2, $location, $date);
     }
     sqlsrv_free_stmt($getResults);
 ?>
