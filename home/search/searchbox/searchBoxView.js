@@ -214,7 +214,7 @@ $(document).ready(function() {
         }); 
     });
     $("#search_box_div").on('click', '#search_month_button', function () {
-        var month = $("#month").val().trim();
+        var month = $("#Select_Month").val().trim();
         $.ajax({
             url: 'https://4633testapi.azurewebsites.net/getScheduleByMonth.php',
             type: 'post',
