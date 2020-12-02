@@ -34,7 +34,7 @@ $(document).ready(function() {
         }); 
     });
     $("#search_box_div").on('click', '#search_Ligue_1_button', function () {
-        var team1 = $("#Ligue 1").val().trim();
+        var team1 = $("#Ligue_1").val().trim();
         $.ajax({
             url: 'https://4633testapi.azurewebsites.net/getScheduleByTeam.php',
             type: 'post',
