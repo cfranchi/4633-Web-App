@@ -3,8 +3,8 @@ $(function() {
 });
 
 $(document).ready(function() {
-    $("#search_box_div").on('click', '#search_team_button', function () {
-        var team1 = $("#team1").val().trim();
+    $("#search_box_div").on('click', '#search_Bundesliga_button', function () {
+        var team1 = $("#Bundesliga").val().trim();
         $.ajax({
             url: 'https://4633testapi.azurewebsites.net/getScheduleByTeam.php',
             type: 'post',
