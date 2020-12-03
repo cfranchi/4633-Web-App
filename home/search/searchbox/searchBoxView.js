@@ -26,6 +26,7 @@ $(document).ready(function() {
                             var td2 = "<td>" + data[i]["team2"] + "</td>";
                             var td3 = "<td>" + data[i]["location"] + "</td>";
                             var td4 = "<td>" + data[i]["date"] + "</td></tr>";
+                            console.log(save_button);
                             save_button_arr.push(save_button);
                             $("#" + tableName).append(tr + save_button + td1 + td2 + td3 + td4); 
                         }
