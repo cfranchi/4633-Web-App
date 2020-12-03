@@ -3,8 +3,7 @@ function saveResults(response, save_button_arr) {
     for (var i = 0; i < save_button_arr.length; i++) {
         var button = $("#add_button_" + i);
         console.log(button);
-        $("#add_button_" + i).click(function() {
-            i = i - 1;
+        button.click(function() {
             var team1 = data[i]["team1"];
             var team2 = data[i]["team2"];
             var location = data[i]["location"];
