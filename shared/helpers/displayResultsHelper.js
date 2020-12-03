@@ -4,9 +4,9 @@ function displayResults(tableName, callback = () => {}) {
     $("#" + tableName + "_div").append(tbl);
     var tr = "<tr>";
     var th0 = "<th></th>";
-    var th1 = "<th>Home Team</th>";
-    var th2 = "<th>Away Team</th>";
-    var th3 = "<th>Location</th>";
+    var th1 = "<th>Team</th>";
+    var th2 = "<th>Opponent</th>";
+    var th3 = "<th>Stadium</th>";
     var th4 = "<th>Date</th></tr>";
     $("#" + tableName).append(tr + th0 + th1 + th2 + th3 + th4); 
     return callback(tableName);
