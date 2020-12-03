@@ -1,12 +1,9 @@
 function saveResults(response, save_button_arr) {
     var data = $.parseJSON(response);
     for (var i = 0; i < save_button_arr.length; i++) {
-        var button = $("#add_button_" + i)
-        console.log("button is" + button);
-        button.click(function() {
-            console.log("button is" + button);
+            $("#add_button_" + i).click(function() {
             var j = 0;
-            while (save_button_arr[j] != button) {
+            while (save_button_arr[j] != $("#add_button_" + i)) {
                 j = j + 1;
             }
             console.log(j);
