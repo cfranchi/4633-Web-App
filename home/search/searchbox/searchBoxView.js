@@ -21,6 +21,7 @@ $(document).ready(function() {
                             var tr = "<tr>";
                             var save_button = "<td><button id='add_button_" + i + "'>save</button></td>";
                             $("#add_button_" + i).click(function() {
+                                console.log("working?");
                                 i = i - 1;
                                 var team1 = data[i]["team1"];
                                 var team2 = data[i]["team2"];
