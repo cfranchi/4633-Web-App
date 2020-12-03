@@ -1,5 +1,6 @@
 function saveResults(response, save_button_arr) {
     var data = $.parseJSON(response);
+    console.log(save_button_arr);
     for (var i = 0; i < save_button_arr.length; i++) {
         $("#add_button_" + i).on('click', function () {
             i = i - 1;
