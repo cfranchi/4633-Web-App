@@ -3,6 +3,7 @@ function saveResults(response, save_button_arr) {
     for (var i = 0; i < save_button_arr.length; i++) {
             $("#add_button_" + i).click(function() {
             var j = 0;
+            console.log(save_button_arr[j]);
             while (save_button_arr[j] != $("#add_button_" + i)) {
                 j = j + 1;
             }
