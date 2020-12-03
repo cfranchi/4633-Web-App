@@ -20,7 +20,7 @@ $(document).ready(function() {
                         for (var i = 0; i < data.length; i++) {
                             var tr = "<tr>";
                             var save_button = "<td><button id='add_button_" + i + "'>save</button></td>";
-                            $("#add_button_" + i).click(function() {
+                            $("#add_button_" + i).on('click', function() {
                                 console.log("working?");
                                 i = i - 1;
                                 var team1 = data[i]["team1"];
