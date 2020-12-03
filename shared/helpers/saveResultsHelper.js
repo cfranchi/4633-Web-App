@@ -2,6 +2,7 @@ function saveResults(response, save_button_arr) {
     var data = $.parseJSON(response);
     for (var i = 0; i < save_button_arr.length; i++) {
         var button = $("#add_button_" + i)
+        console.log("button is" + button);
         button.click(function() {
             console.log("button is" + button);
             var j = 0;
