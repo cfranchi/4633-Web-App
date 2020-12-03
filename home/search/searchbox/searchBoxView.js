@@ -4,9 +4,7 @@ $(function() {
 
 $(document).ready(function() {
     $("#search_box_div").on('click', '#search_league_button', function () {
-        var league = $("#Select_League option:selected").val().trim();
-        console.log("check");
-        console.log(league);
+        var league = $("#Select_League").val().trim();
         $.ajax({
             url: 'https://4633testapi.azurewebsites.net/getScheduleByLeague.php',
             type: 'post',
@@ -22,6 +20,31 @@ $(document).ready(function() {
                         for (var i = 0; i < data.length; i++) {
                             var tr = "<tr>";
                             var save_button = "<td><button id='add_button_" + i + "'>save</button></td>";
+                            $("#add_button_" + i).click(function() {
+                                i = i - 1;
+                                var team1 = data[i]["team1"];
+                                var team2 = data[i]["team2"];
+                                var location = data[i]["location"];
+                                var date = data[i]["date"];
+                                $.ajax({
+                                    url: './home/search/searchresults/searchResultsController.php',
+                                    type: 'post',
+                                    data: {
+                                        username: username,
+                                        team1: team1,
+                                        team2: team2,
+                                        location: location,
+                                        date: date
+                                    },
+                                    success: function(response) {
+                                        if (response == 0) {
+                                            alert("match saved");
+                                        } else {
+                                            alert("error occured!");
+                                        }
+                                    }
+                                });
+                            });
                             var td1 = "<td>" + data[i]["team1"] + "</td>";
                             var td2 = "<td>" + data[i]["team2"] + "</td>";
                             var td3 = "<td>" + data[i]["location"] + "</td>";
