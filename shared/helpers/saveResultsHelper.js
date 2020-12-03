@@ -7,6 +7,7 @@ function saveResults(response, save_button_arr) {
             var team2 = data[i]["team2"];
             var location = data[i]["location"];
             var date = data[i]["date"];
+            console.log(team1 + ", " team2 + "," + location + ", " + date);
             $.ajax({
                 url: './home/search/searchresults/searchResultsController.php',
                 type: 'post',
