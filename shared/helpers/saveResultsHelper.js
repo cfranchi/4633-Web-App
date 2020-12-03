@@ -1,13 +1,18 @@
 function saveResults(response, save_button_arr) {
     var data = $.parseJSON(response);
     for (var i = 0; i < save_button_arr.length; i++) {
-        var button = $("#add_button_" + i);
-        console.log(button);
+        var button = $("#add_button_" + i)
         button.click(function() {
-            var team1 = data[i]["team1"];
-            var team2 = data[i]["team2"];
-            var location = data[i]["location"];
-            var date = data[i]["date"];
+            console.log("button is" + button);
+            var j = 0;
+            while (save_button_arr[j] != button) {
+                j = j + 1;
+            }
+            console.log(j);
+            var team1 = data[j]["team1"];
+            var team2 = data[j]["team2"];
+            var location = data[j]["location"];
+            var date = data[j]["date"];
             $.ajax({
                 url: './home/search/searchresults/searchResultsController.php',
                 type: 'post',
