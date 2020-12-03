@@ -4,7 +4,7 @@ $(function() {
 
 $(document).ready(function() {
     $("#search_box_div").on('click', '#search_league_button', function () {
-        var league = $("#Select_League").val().trim();
+        var league = $("#Select_League option:selected").val().trim();
         $.ajax({
             url: 'https://4633testapi.azurewebsites.net/getScheduleByLeague.php',
             type: 'post',
